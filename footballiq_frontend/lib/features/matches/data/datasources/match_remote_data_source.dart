@@ -15,30 +15,63 @@ class MatchRemoteDataSource {
     }
   }
 
-  Future<List<ShotEntity>> getMatchShots(String matchId) async {
+  Future<List<ShotModel>> getMatchShots(String matchId) async {
     final response = await http.get(Uri.parse('$baseUrl/$matchId/shots'));
     if (response.statusCode == 200) {
       final List<dynamic> jsonList = json.decode(response.body);
-      return jsonList.map((json) => ShotEntity.fromJson(json)).toList();
+      return jsonList.map((json) => ShotModel.fromJson(json)).toList();
     }
     throw Exception('Failed to load shots');
   }
 
-  Future<List<MomentumEntity>> getMatchMomentum(String matchId) async {
+  Future<List<MomentumModel>> getMatchMomentum(String matchId) async {
     final response = await http.get(Uri.parse('$baseUrl/$matchId/momentum'));
     if (response.statusCode == 200) {
       final List<dynamic> jsonList = json.decode(response.body);
-      return jsonList.map((json) => MomentumEntity.fromJson(json)).toList();
+      return jsonList.map((json) => MomentumModel.fromJson(json)).toList();
     }
     throw Exception('Failed to load momentum');
   }
 
-  Future<List<HeatMapEntity>> getPlayerHeatMap(String matchId, String playerId) async {
+  Future<List<HeatMapModel>> getPlayerHeatMap(String matchId, String playerId) async {
     final response = await http.get(Uri.parse('$baseUrl/$matchId/heatmap/$playerId'));
     if (response.statusCode == 200) {
       final List<dynamic> jsonList = json.decode(response.body);
-      return jsonList.map((json) => HeatMapEntity.fromJson(json)).toList();
+      return jsonList.map((json) => HeatMapModel.fromJson(json)).toList();
     }
     throw Exception('Failed to load heat map');
+  }
+}
+
+class ShotModel {
+  // Define your shot properties here
+  // This is a placeholder - adjust based on your API response
+  
+  ShotModel();
+  
+  factory ShotModel.fromJson(Map<String, dynamic> json) {
+    return ShotModel();
+  }
+}
+
+class MomentumModel {
+  // Define your momentum properties here
+  // This is a placeholder - adjust based on your API response
+  
+  MomentumModel();
+  
+  factory MomentumModel.fromJson(Map<String, dynamic> json) {
+    return MomentumModel();
+  }
+}
+
+class HeatMapModel {
+  // Define your heat map properties here
+  // This is a placeholder - adjust based on your API response
+  
+  HeatMapModel();
+  
+  factory HeatMapModel.fromJson(Map<String, dynamic> json) {
+    return HeatMapModel();
   }
 }
