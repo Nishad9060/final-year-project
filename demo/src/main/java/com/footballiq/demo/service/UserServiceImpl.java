@@ -5,6 +5,7 @@ import com.footballiq.demo.dto.LoginRequest;
 import com.footballiq.demo.dto.RegisterRequest;
 import com.footballiq.demo.entity.User;
 import com.footballiq.demo.repository.UserRepository;
+import com.footballiq.demo.security.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -15,24 +16,29 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final JwtUtil jwtUtil;
 
-    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.jwtUtil = jwtUtil;
     }
 
     @Override
     public AuthResponse registerUser(RegisterRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
-            return new AuthResponse(false, null, request.getEmail(), null, null, "Email already registered!");
+            return new AuthResponse(false, null, null, request.getEmail(), null, null, "Email already registered!");
         }
 
         String encodedPassword = passwordEncoder.encode(request.getPassword());
         User user = new User(request.getEmail(), encodedPassword, request.getFullName(), request.getPreferredTeam());
         User savedUser = userRepository.save(user);
+        
+        String jwtToken = jwtUtil.generateToken(savedUser.getEmail());
 
         return new AuthResponse(
                 true,
+                jwtToken,
                 savedUser.getId(),
                 savedUser.getEmail(),
                 savedUser.getFullName(),
@@ -46,16 +52,19 @@ public class UserServiceImpl implements UserService {
         Optional<User> userOptional = userRepository.findByEmail(request.getEmail());
 
         if (userOptional.isEmpty()) {
-            return new AuthResponse(false, null, request.getEmail(), null, null, "Invalid credentials");
+            return new AuthResponse(false, null, null, request.getEmail(), null, null, "Invalid credentials");
         }
 
         User user = userOptional.get();
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-            return new AuthResponse(false, null, request.getEmail(), null, null, "Invalid credentials");
+            return new AuthResponse(false, null, null, request.getEmail(), null, null, "Invalid credentials");
         }
+
+        String jwtToken = jwtUtil.generateToken(user.getEmail());
 
         return new AuthResponse(
                 true,
+                jwtToken,
                 user.getId(),
                 user.getEmail(),
                 user.getFullName(),
@@ -69,12 +78,13 @@ public class UserServiceImpl implements UserService {
         Optional<User> userOptional = userRepository.findById(id);
 
         if (userOptional.isEmpty()) {
-            return new AuthResponse(false, null, null, null, null, "User not found");
+            return new AuthResponse(false, null, null, null, null, null, "User not found");
         }
 
         User user = userOptional.get();
         return new AuthResponse(
                 true,
+                null,
                 user.getId(),
                 user.getEmail(),
                 user.getFullName(),
@@ -88,7 +98,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> userOptional = userRepository.findById(id);
 
         if (userOptional.isEmpty()) {
-            return new AuthResponse(false, null, null, null, null, "User not found");
+            return new AuthResponse(false, null, null, null, null, null, "User not found");
         }
 
         User user = userOptional.get();
@@ -97,6 +107,7 @@ public class UserServiceImpl implements UserService {
 
         return new AuthResponse(
                 true,
+                null,
                 updatedUser.getId(),
                 updatedUser.getEmail(),
                 updatedUser.getFullName(),

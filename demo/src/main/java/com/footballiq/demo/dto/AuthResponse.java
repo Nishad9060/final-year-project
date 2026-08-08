@@ -3,6 +3,7 @@ package com.footballiq.demo.dto;
 public class AuthResponse {
 
     private boolean isAuthenticated;
+    private String token;
     private Long userId;
     private String email;
     private String fullName;
@@ -12,8 +13,9 @@ public class AuthResponse {
     public AuthResponse() {
     }
 
-    public AuthResponse(boolean isAuthenticated, Long userId, String email, String fullName, String preferredTeam, String message) {
+    public AuthResponse(boolean isAuthenticated, String token, Long userId, String email, String fullName, String preferredTeam, String message) {
         this.isAuthenticated = isAuthenticated;
+        this.token = token;
         this.userId = userId;
         this.email = email;
         this.fullName = fullName;
@@ -67,5 +69,13 @@ public class AuthResponse {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

@@ -45,7 +45,7 @@ public class AuthController {
     public ResponseEntity<AuthResponse> getCurrentUser(@RequestParam(value = "userId", defaultValue = "1") Long userId) {
         AuthResponse response = userService.getUserProfile(userId);
         if (!response.getIsAuthenticated()) {
-            return ResponseEntity.ok(new AuthResponse(true, 1L, "demo@footballiq.com", "Demo User", "Default Team", "Fallback mock status"));
+            return ResponseEntity.ok(new AuthResponse(true, null, 1L, "demo@footballiq.com", "Demo User", "Default Team", "Fallback mock status"));
         }
         return ResponseEntity.ok(response);
     }
