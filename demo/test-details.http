@@ -1,0 +1,14 @@
+# Test fetching ESPN details for an Arsenal match (401879301 is Arsenal vs Coventry)
+POST http://localhost:8080/api/fixtures/401879301/scrape-espn?league=eng.1
+
+###
+# Test fetching Understat details for Arsenal vs someone (say match 26498)
+POST http://localhost:8080/api/fixtures/401879301/scrape-understat?understatMatchId=26498
+
+###
+# Get details
+GET http://localhost:8080/api/fixtures/401879301/details
+
+###
+# Get shotmap
+GET http://localhost:8080/api/fixtures/401879301/shotmap
