@@ -1,22 +1,17 @@
-### Test User Registration
-POST http://localhost:8080/api/auth/register
+### Test FootballIQ Scraper Endpoints
+
+### 1. Trigger a manual scrape (fetches live data from ESPN and stores in DB)
+POST http://localhost:8080/api/fixtures/sync-now
 Content-Type: application/json
 
-{
-  "email": "testuser@footballiq.com",
-  "password": "Password123!",
-  "fullName": "Test Fan",
-  "preferredTeam": "Real Madrid"
-}
+### 2. Get all fixtures from cached DB
+GET http://localhost:8080/api/fixtures
 
-### Test User Login
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
+### 3. Get fixtures for Premier League only
+GET http://localhost:8080/api/fixtures/league/eng.1
 
-{
-  "email": "testuser@footballiq.com",
-  "password": "Password123!"
-}
+### 4. Get fixtures for La Liga
+GET http://localhost:8080/api/fixtures/league/esp.1
 
-### Test Get Active User
-GET http://localhost:8080/api/auth/me?userId=1
+### 5. Get fixtures for Champions League
+GET http://localhost:8080/api/fixtures/league/uefa.champions
