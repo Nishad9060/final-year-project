@@ -1,9 +1,12 @@
 package com.footballiq.demo.dto;
 
+import java.util.UUID;
+
 public class AuthResponse {
 
     private boolean isAuthenticated;
     private String token;
+    private UUID otpId;
     private Long userId;
     private String email;
     private String fullName;
@@ -13,9 +16,10 @@ public class AuthResponse {
     public AuthResponse() {
     }
 
-    public AuthResponse(boolean isAuthenticated, String token, Long userId, String email, String fullName, String preferredTeam, String message) {
+    public AuthResponse(boolean isAuthenticated, String token, UUID otpId, Long userId, String email, String fullName, String preferredTeam, String message) {
         this.isAuthenticated = isAuthenticated;
         this.token = token;
+        this.otpId = otpId;
         this.userId = userId;
         this.email = email;
         this.fullName = fullName;
@@ -77,5 +81,13 @@ public class AuthResponse {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public UUID getOtpId() {
+        return otpId;
+    }
+
+    public void setOtpId(UUID otpId) {
+        this.otpId = otpId;
     }
 }

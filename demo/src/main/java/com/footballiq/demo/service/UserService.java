@@ -10,6 +10,8 @@ public interface UserService {
 
     AuthResponse loginUser(LoginRequest request);
 
+    AuthResponse verifyOtpLogin(java.util.UUID otpId, String otpCode);
+
     AuthResponse getUserProfile(Long id);
 
     AuthResponse updateUserPreferences(Long id, String preferredTeam);
