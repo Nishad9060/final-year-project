@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: theme('colors.background');
+    color: theme('colors.on-surface');
+  }
+
+  body {
+    overscroll-behavior: none;
+    font-family: theme('fontFamily.body-md');
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+/* Hide scrollbars while keeping scroll behavior, matching the Stitch exports */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}

@@ -1,0 +1,167 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#ffb3ad","inverse-on-surface":"#313031","error-container":"#93000a","surface":"#131314","background":"#131314","surface-variant":"#353436","on-tertiary":"#003915","on-tertiary-container":"#84ff9c","surface-container-highest":"#353436","secondary-fixed-dim":"#ffb3ad","on-error-container":"#ffdad6","error":"#ffb4ab","outline":"#958da1","on-surface-variant":"#ccc3d8","outline-variant":"#4a4455","tertiary":"#4ae176","on-background":"#e5e2e3","on-tertiary-fixed-variant":"#005321","surface-tint":"#d2bbff","on-surface":"#e5e2e3","primary-container":"#7c3aed","on-primary-container":"#ede0ff","primary-fixed":"#eaddff","on-secondary-fixed-variant":"#930013","surface-dim":"#131314","tertiary-fixed-dim":"#4ae176","on-secondary-container":"#ffaea8","surface-bright":"#3a393a","tertiary-fixed":"#6bff8f","on-secondary-fixed":"#410004","surface-container-low":"#1c1b1c","inverse-surface":"#e5e2e3","on-primary-fixed-variant":"#5a00c6","secondary-fixed":"#ffdad7","primary":"#d2bbff","secondary-container":"#a40217","on-primary":"#3f008e","on-secondary":"#68000a","surface-container":"#201f20","surface-container-high":"#2a2a2b","surface-container-lowest":"#0e0e0f","on-tertiary-fixed":"#002109","primary-fixed-dim":"#d2bbff","tertiary-container":"#007733","on-primary-fixed":"#25005a","on-error":"#690005","inverse-primary":"#732ee4"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"xs":"4px","gutter":"16px","max-width":"1200px","xl":"40px","base":"4px","margin-mobile":"16px","sm":"8px","margin-desktop":"32px","lg":"24px","md":"16px"},"fontFamily":{"score-display":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"label-caps":["Inter"],"score-display-mobile":["Inter"],"body-md":["Inter"],"data-tabular":["Inter"],"body-lg":["Inter"]},"fontSize":{"score-display":["48px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"score-display-mobile":["36px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"data-tabular":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-16 w-full max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-xl"><span class="font-headline-md text-headline-md tracking-tighter text-on-surface select-none">FOOTONOMY</span><nav class="hidden md:flex items-center gap-lg" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="matches" href="#">Matches</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tournaments" href="#">Tournaments</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="search" href="#">Search</a></nav></div><div class="flex items-center gap-md"><button class="hidden sm:flex items-center gap-xs px-md py-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="max-w-max-width mx-auto w-full px-margin-mobile lg:px-margin-desktop py-lg">
+<!-- Filter Bar -->
+<div class="flex items-center justify-between mb-xl">
+<div class="flex gap-sm overflow-x-auto pb-xs">
+<button class="px-md py-sm rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface text-data-tabular">Yesterday</button>
+<button class="px-md py-sm rounded-full bg-primary hover:bg-primary-container transition-colors text-on-primary font-bold text-data-tabular shadow-sm">Today</button>
+<button class="px-md py-sm rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface text-data-tabular">Tomorrow</button>
+<div class="w-px h-6 bg-outline-variant/30 mx-sm self-center"></div>
+<button class="flex items-center gap-xs px-md py-sm rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface text-data-tabular">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Date</span>
+</button>
+</div>
+<div class="hidden md:flex gap-sm">
+<button class="flex items-center gap-xs px-md py-sm rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface text-data-tabular">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Leagues</span>
+</button>
+</div>
+</div>
+<!-- Feed Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl relative">
+<!-- Main Feed Column -->
+<div class="lg:col-span-8 flex flex-col gap-xl">
+<!-- League Group: Premier League -->
+<div class="flex flex-col gap-xs relative">
+<div class="sticky top-16 z-40 bg-surface/80 backdrop-blur-md py-sm flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+<img class="w-4 h-4 object-contain opacity-80" data-alt="A minimal, stylized 24x24 icon of the English Premier League lion logo in white on a dark background, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlmnlsZLO3M7zujjKX520B4HS9o4tF4Yge2H5FGEI0TQGRntFiVstq6YTx7G6SFVWKg4ga25ACQvF-4cNO21dDqLjfBMqdSxiUW5_5XCts5c0ddGFp2MOyA86f7uiIOUcFL0wG-F7Sh183wB1VqxhilLI1qM3s9jTEnHiGOeY7lJg6oFY2H3zVIGqsAo2VTdtknNk-Q5y2SEWiAy_Zm0Oe9H_4A0yvu-UwYGVQtmfQx0ZU9Jh5FqWzXw"/>
+</div>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Premier League</h2>
+<span class="ml-auto text-label-caps text-outline">Matchday 24</span>
+</div>
+<!-- LIVE Match -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-colors rounded-xl p-md flex items-center shadow-sm cursor-pointer group">
+<div class="w-16 flex flex-col items-center justify-center border-r border-outline-variant/20 pr-md mr-md">
+<span class="text-error font-bold text-data-tabular flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                72'
+              </span>
+</div>
+<div class="flex-1 flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<img class="w-4 h-4 object-contain" data-alt="Minimalist emblem of Arsenal FC, red and white cannon, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQftX3LmqH00z0VgIInnxP_ITBd-zc3SRXTkLrNJMV_VtX2dhRFlSJhP8UdCGbQ-9p8CxK5HM6Ys_Pp2U75fK-XcAPDRIN6Jt173HlEKAxtLh0tGowRTjSb_G3JWgvjRF_zKHWvUg0ySRjv_LKhsB6XY_MAFG8TfUEla_mhi9JOunTqAI2pg_DrwvBAy5tGcuHrdraNkmt1CFbmbRKliWouhzH8P2VzwPA-TreP6yDjSoSIXoDkMZz9Q"/>
+</div>
+<span class="font-headline-md text-body-lg text-on-surface">Arsenal</span>
+</div>
+<span class="font-score-display text-headline-lg text-primary">2</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<img class="w-4 h-4 object-contain" data-alt="Minimalist emblem of Liverpool FC, red liver bird, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFszpeswSOopTKfm9c0rNwCMKvfhLscmvMeEMrRxWv3GhBBFGloO0ScdZvFLRnX8UL92ZHHcr_FL8_tGfPrTIu9ovqy-Rwl0zdDiDziqvNlo6XaDIWXiQfPw1xIGAWSao8nyCT66zPEJTAqy9vZu9SHJNvRevJyv-PAscvA8JSHNx91Ljj04Uql7IqsyWG8Tj46-ulha9MSEDE5lrKV0utUQzz3Xm3nDkCNDuI3t_msAJBlDrXF_2omQ"/>
+</div>
+<span class="font-headline-md text-body-lg text-on-surface">Liverpool</span>
+</div>
+<span class="font-score-display text-headline-lg text-on-surface">1</span>
+</div>
+</div>
+<div class="w-12 flex justify-end pl-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- UPCOMING Match -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-colors rounded-xl p-md flex items-center shadow-sm cursor-pointer group">
+<div class="w-16 flex flex-col items-center justify-center border-r border-outline-variant/20 pr-md mr-md">
+<span class="text-on-surface-variant text-data-tabular">20:45</span>
+</div>
+<div class="flex-1 flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<img class="w-4 h-4 object-contain" data-alt="Minimalist emblem of Manchester City, sky blue ship and rose, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJSmDw2C86S_DL8UODMoAYDhoDddGm83TWTRoNYrCdkMvFPufMP0P6AqEKFVnbf1cxZFpQQzzlfLukn8IP4BH5XhRaOf5cSinraITrnhzVC3F6AkZqVoJeD61bPQ-BXFlFcLtJzsac2bAmC71YPPzS1AvO9PtuqZywA1igxDVqStc6acpVFf1BzknH9EepOSKzfipG6pUXxb8hB2wdr_RYRpyDL3eoMGz4kqrZ4iYt4FcK368-ePS73w"/>
+</div>
+<span class="font-headline-md text-body-lg text-on-surface">Man City</span>
+</div>
+<span class="font-score-display text-headline-md text-outline-variant">-</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<img class="w-4 h-4 object-contain" data-alt="Minimalist emblem of Chelsea FC, blue lion, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRDWzrsOioDhfSB2Vm1kZDtowHWD9JiFGSXkEjyjaItYPLnzBtMea0A6bvNjlCos4GGrpDw2MbOUVvg2xYp-gU1ueNDQTjlEpxdqlzWI1yksWADXZhYZ08lriLo3trvmCweqAojSJ9MZs0gXs1PZ7KCIC3tjeAgkECBSK-dG8TJ9GPggQvrAyusrzR-B8pA8DKPINO5zoYfSwk0uK4VwsyPYLIeSW8QlVckKLw4pkr8fn13-UlFpG08w"/>
+</div>
+<span class="font-headline-md text-body-lg text-on-surface">Chelsea</span>
+</div>
+<span class="font-score-display text-headline-md text-outline-variant">-</span>
+</div>
+</div>
+<div class="w-12 flex justify-end pl-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- League Group: La Liga -->
+<div class="flex flex-col gap-xs relative">
+<div class="sticky top-16 z-40 bg-surface/80 backdrop-blur-md py-sm flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+<img class="w-4 h-4 object-contain opacity-80" data-alt="A minimal, stylized 24x24 icon of the La Liga logo in white on a dark background, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_uBMzBf67ntO7VzVtfd2uYKrrJ8paFA00YDTLWt84-hF3naqnuy7aWhWMDeO-EmLjt7hltkRzUWQiHee_DB-xyu-_4ylhPiWmbHTPzTswczeRzz3USe1o26mMUKoZXKLo-FJZ9wp2TrIIQDgR0unZTO-Ocx2b2J_7edT2SWNiXj9hkE9hRPrCZQ2m2-LgJwiFM3i3ThVnqZTlfA81ae7m1wKPLAHZZElzu_wGusBjGKGiRTkaoTwI6w"/>
+</div>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">La Liga</h2>
+<span class="ml-auto text-label-caps text-outline">Matchday 25</span>
+</div>
+<!-- FINISHED Match -->
+<div class="bg-surface-container/50 hover:bg-surface-container transition-colors rounded-xl p-md flex items-center shadow-sm cursor-pointer group">
+<div class="w-16 flex flex-col items-center justify-center border-r border-outline-variant/10 pr-md mr-md">
+<span class="text-outline text-label-caps">FT</span>
+</div>
+<div class="flex-1 flex flex-col gap-sm opacity-60">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<img class="w-4 h-4 object-contain grayscale" data-alt="Minimalist emblem of Real Madrid, crown and letters, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsbBI1hePA9X9UUveKjX0U4K1Xq_nrc7p0x18Hp4ce9sJRmBLJ2EEAI2S33j_cGhfSPtNP5RUncHpalBfP7xenRkRnv52vnbul9yV2f5fRDWLcxWlJA-D_bMP0oyqh2Vz0xlH4WxdSdus2zgHdecC26bBCcs_eqsG2tgsJI5s3vp8zQSdjAyQM3Lrw0naYZwT4YOt1SrFv9wYRjxI_Ts8jCh0qDxFMN6vShIvcOaPTmlx6EO-pTsg1Q"/>
+</div>
+<span class="font-headline-md text-body-lg text-on-surface">Real Madrid</span>
+</div>
+<span class="font-score-display text-headline-lg text-on-surface">3</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<img class="w-4 h-4 object-contain grayscale" data-alt="Minimalist emblem of Barcelona FC, crest with stripes and ball, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYbsX2HvdY2EqWOaMqbKwh1qy7FpYv8PzJ8G68T6tfDNCoke5lVS7fkSYGJ55tH0YcAMqWip4loFXP-Dv3ORxK1GN835stpfUHVpc9Gv_vg64iHG1bBfxPs8fvvtC1wypxaKeBIQAEriKH5jSlq6HeX4dajHEYu9cHdOv4_XkHOxjTU9aAgtpXFFSWsJpkqW2cnhKcRu5O89sQUeOyZwOvrKAQuvcYcltlZm_LRCVZl4Nd9KpdMvG2Ig"/>
+</div>
+<span class="font-headline-md text-body-lg text-on-surface font-normal">Barcelona</span>
+</div>
+<span class="font-score-display text-headline-lg text-outline">0</span>
+</div>
+</div>
+<div class="w-12 flex justify-end pl-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar / Spotlight (Desktop only) -->
+<div class="hidden lg:block lg:col-span-4">
+<div class="sticky top-24 bg-surface-container rounded-xl p-lg shadow-md flex flex-col gap-md">
+<div class="flex items-center justify-between mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Match Spotlight</h3>
+<span class="material-symbols-outlined text-primary animate-pulse">sports_soccer</span>
+</div>
+<div class="w-full aspect-video rounded-lg overflow-hidden relative mb-sm shadow-inner">
+<div class="w-full h-full bg-cover bg-center mix-blend-luminosity opacity-80" data-alt="A dramatic, high-contrast photograph of a football stadium at night under floodlights. The pitch is intensely green, surrounded by deep shadows and dark seating. The atmosphere is tense and energetic, fitting a dark-mode sports app. Focus on the geometry of the pitch lines and light flares." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2BZoik5InRyYz6QRck-AEnqeHNXH0Qa5Gd10UHQeKDAyo4n4YppjEYGhYpJmv1_dE0TjaxOeoJTwbUwskXSiWvBZQeeCch6s7T-IEBIyW1GX_JtTCbdUUdSvUb-yd9ZjwsdLTD6cLLjLQ8AOx6BoOPZswcT_Wt6SXiBtMf5Um63hd-rnUmYtmU4v6zZJ3nKFo4MbkqaLTuRV6QJeSNICcIuUYhSgYXyo8g1b2EIgHJR7ocsEjrCLrNw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/50 to-transparent"></div>
+<div class="absolute bottom-md left-md right-md flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-label-caps text-on-surface-variant mb-xs">UEFA Champions League</span>
+<span class="font-headline-md text-body-lg text-on-surface">Bayern Munich vs PSG</span>
+</div>
+<span class="text-data-tabular text-primary font-bold bg-primary/10 px-sm py-xs rounded-md">21:00</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant line-clamp-3">
+            Crucial quarter-final clash tonight at the Allianz Arena. Both teams are looking to secure a decisive advantage in the first leg. Key battle: Midfield possession.
+          </p>
+<button class="w-full py-sm rounded-lg bg-primary hover:bg-primary/90 transition-colors text-on-primary font-bold mt-sm shadow-sm">
+            Preview Match
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-xl mt-xl"><div class="max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop"><div class="flex flex-col md:flex-row justify-between items-center gap-lg"><span class="font-headline-md text-headline-md tracking-tighter text-on-surface-variant opacity-50">FOOTONOMY</span><div class="flex gap-lg text-on-surface-variant text-data-tabular"><a class="hover:text-primary transition-colors" href="#">Terms</a><a class="hover:text-primary transition-colors" href="#">Privacy</a><a class="hover:text-primary transition-colors" href="#">Support</a></div><div class="text-on-surface-variant text-data-tabular opacity-60">© 2024 Footonomy. All rights reserved.</div></div></div></footer></body></html>

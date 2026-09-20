@@ -1,0 +1,14 @@
+target/
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+# Env files (never commit secrets — see docs/CLAUDE.md "Secrets")
+.env
+.env.local

@@ -1,0 +1,229 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#ffb3ad","inverse-on-surface":"#313031","error-container":"#93000a","surface":"#131314","background":"#131314","surface-variant":"#353436","on-tertiary":"#003915","on-tertiary-container":"#84ff9c","surface-container-highest":"#353436","secondary-fixed-dim":"#ffb3ad","on-error-container":"#ffdad6","error":"#ffb4ab","outline":"#958da1","on-surface-variant":"#ccc3d8","outline-variant":"#4a4455","tertiary":"#4ae176","on-background":"#e5e2e3","on-tertiary-fixed-variant":"#005321","surface-tint":"#d2bbff","on-surface":"#e5e2e3","primary-container":"#7c3aed","on-primary-container":"#ede0ff","primary-fixed":"#eaddff","on-secondary-fixed-variant":"#930013","surface-dim":"#131314","tertiary-fixed-dim":"#4ae176","on-secondary-container":"#ffaea8","surface-bright":"#3a393a","tertiary-fixed":"#6bff8f","on-secondary-fixed":"#410004","surface-container-low":"#1c1b1c","inverse-surface":"#e5e2e3","on-primary-fixed-variant":"#5a00c6","secondary-fixed":"#ffdad7","primary":"#d2bbff","secondary-container":"#a40217","on-primary":"#3f008e","on-secondary":"#68000a","surface-container":"#201f20","surface-container-high":"#2a2a2b","surface-container-lowest":"#0e0e0f","on-tertiary-fixed":"#002109","primary-fixed-dim":"#d2bbff","tertiary-container":"#007733","on-primary-fixed":"#25005a","on-error":"#690005","inverse-primary":"#732ee4"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"xs":"4px","gutter":"16px","max-width":"1200px","xl":"40px","base":"4px","margin-mobile":"16px","sm":"8px","margin-desktop":"32px","lg":"24px","md":"16px"},"fontFamily":{"score-display":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"label-caps":["Inter"],"score-display-mobile":["Inter"],"body-md":["Inter"],"data-tabular":["Inter"],"body-lg":["Inter"]},"fontSize":{"score-display":["48px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"score-display-mobile":["36px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"data-tabular":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-16 w-full max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-xl"><span class="font-headline-md text-headline-md tracking-tighter text-on-surface select-none">FOOTONOMY</span><nav class="hidden md:flex items-center gap-lg" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="matches" href="#">Matches</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tournaments" href="#">Tournaments</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="search" href="#">Search</a></nav></div><div class="flex items-center gap-md"><button class="hidden sm:flex items-center gap-xs px-md py-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Match Score Header (No Hero Image bleed as per guidelines, just structural data visualization) -->
+<div class="relative w-full rounded-xl bg-surface-container shadow-2xl overflow-hidden mt-6 mx-auto max-w-max-width group">
+<!-- Stadium Ambient Background -->
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="w-full h-full bg-cover bg-center mix-blend-luminosity" data-alt="A highly detailed, cinematic wide shot of the Emirates Stadium at night under bright floodlights. The pitch is pristine green, stands packed with fans in red and white. Atmospheric mist, dynamic lighting, intense sporting energy, modern high-tech aesthetic fitting a sophisticated dark-themed companion app." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZb4fupU_5n0aqFtzCUKjcvkwseTE3BR3WkrwmLerv65WGPWgJwKW0zAP7w_t4Kylql5bDaprEZPqFxQ7MMM0PB7SE_8jshcjmiIL5X2wB0UiHq7QJIWZGY2-1oQM7a1ehOQh2UCQj0xqDRNHfL_cXk4sZ8FvBynyoQxlCl0GSorNXYZsFpyKk1lq3nnHg0GVf-X2-ep30fT1heX6E1jNnODmIdPu2IxqyPtbUsLh5Dv2yq1WldmbBKQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/80 to-transparent"></div>
+</div>
+<!-- Match Metadata -->
+<div class="relative z-10 flex flex-col items-center pt-lg pb-md px-margin-mobile">
+<div class="flex items-center gap-sm bg-surface/80 backdrop-blur-md rounded-full px-4 py-1 shadow-md mb-lg">
+<span class="material-symbols-outlined text-outline text-[16px]">trophy</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest opacity-80">Premier League • Matchday 24</span>
+</div>
+<!-- Main Scoreboard Grid -->
+<div class="flex w-full max-w-3xl justify-between items-center gap-md md:gap-xl">
+<!-- Home Team (Arsenal) -->
+<div class="flex flex-col items-center flex-1 gap-md">
+<div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-surface-container-highest shadow-xl flex items-center justify-center overflow-hidden p-3 transition-transform hover:scale-105">
+<img class="w-full h-full object-contain drop-shadow-md" data-alt="A polished, minimalist modern 3D render of the Arsenal FC crest on a dark textured background. High contrast, metallic red and gold accents, clean and authoritative design for a sports app UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPCQ4ozUzA2LJ_Q0E2E8QgJ9H3kbiK6ZOs-5CWNoNzkJK0v9QQ3NphDQN87BLZxeDiUMLp6onuYWEQ93Zd8winFlXKY_FHaof86ctT6oGeJ--dujL8JdltaSLiWtsbZqWKMsrq-QZk106Jb8np4yLVUeNR4c5C4taArcqJZA7hVvySaPGYqKFlZj7ndQFdnr7c0g4hFDrTpDt7gLYrklhl4jH4YQsvemnGVZOiRJGpNbTuc78U-XDlQ"/>
+</div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface text-center">Arsenal</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase bg-surface-container-lowest px-2 py-1 rounded-sm shadow-sm">Home</span>
+</div>
+<!-- Score & Time -->
+<div class="flex flex-col items-center justify-center gap-xs">
+<div class="flex items-center gap-2 bg-error-container/20 rounded-full px-3 py-1 shadow-sm mb-2">
+<div class="w-2 h-2 rounded-full bg-error animate-pulse"></div>
+<span class="font-data-tabular text-data-tabular text-error font-bold">72'</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="font-score-display text-score-display md:text-[72px] md:leading-[72px] text-on-surface">2</span>
+<span class="font-headline-md text-headline-md text-outline-variant">-</span>
+<span class="font-score-display text-score-display md:text-[72px] md:leading-[72px] text-on-surface opacity-80">1</span>
+</div>
+</div>
+<!-- Away Team (Liverpool) -->
+<div class="flex flex-col items-center flex-1 gap-md">
+<div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-surface-container-highest shadow-xl flex items-center justify-center overflow-hidden p-3 transition-transform hover:scale-105">
+<img class="w-full h-full object-contain drop-shadow-md" data-alt="A polished, minimalist modern 3D render of the Liverpool FC crest on a dark textured background. High contrast, vibrant metallic red accents, clean and authoritative design for a sports app UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXJuRkPlHl4H0af-1LwNPfAETlBclApzSdTHkf0SvAyIH8Xg7CXGP1DGU7ABX_vUo5GOTNxZoR7_p5-gmnykB3gSXHylEi_bvnerq2VUJ-MHvOQs_efjM6hZv2-VyaX1wY9SSKd-cS0OAympSq6fAw2YAiLWPtFhkmJRm0Hpon4c9_L7oVSreoEnQm_gZGbTy8gd-_PMugrUlOtRmeUSo4EWLexjp3ELK9wbNBrHBDZ_BdeItWpHBciw"/>
+</div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface text-center">Liverpool</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase bg-surface-container-lowest px-2 py-1 rounded-sm shadow-sm">Away</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout -->
+<div class="w-full max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop mt-xl">
+<!-- Tab Navigation -->
+<nav class="flex items-center gap-lg bg-surface-container-lowest rounded-xl p-2 shadow-inner mb-lg overflow-x-auto" role="tablist">
+<button aria-selected="true" class="font-data-tabular text-data-tabular text-on-primary-container bg-primary-container px-6 py-2 rounded-lg shadow-sm whitespace-nowrap transition-all" role="tab">Overview</button>
+<button aria-selected="false" class="font-data-tabular text-data-tabular text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-6 py-2 rounded-lg whitespace-nowrap transition-all" role="tab">Stats</button>
+<button aria-selected="false" class="font-data-tabular text-data-tabular text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-6 py-2 rounded-lg whitespace-nowrap transition-all" role="tab">Timeline</button>
+<button aria-selected="false" class="font-data-tabular text-data-tabular text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-6 py-2 rounded-lg whitespace-nowrap transition-all" role="tab">Standings</button>
+</nav>
+<!-- Bento Grid Layout for Match Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column (Overview Events & Form) -->
+<div class="flex flex-col gap-gutter md:col-span-8">
+<!-- Key Events Timeline -->
+<div class="bg-surface-container rounded-xl shadow-md p-md md:p-lg flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Key Events</h3>
+<div class="flex flex-col gap-4 relative">
+<!-- Timeline Center Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-surface-container-highest -translate-x-1/2"></div>
+<!-- Event 1 (Arsenal Goal) -->
+<div class="flex w-full items-center justify-between group">
+<div class="w-[45%] flex flex-col items-end text-right">
+<span class="font-data-tabular text-data-tabular text-on-surface">Bukayo Saka</span>
+<span class="font-label-caps text-label-caps text-outline">Assist: Martin Ødegaard</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container shadow-sm flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[16px]">sports_soccer</span>
+</div>
+<div class="w-[45%] flex flex-col items-start">
+<span class="font-data-tabular text-data-tabular text-primary-fixed font-bold">14'</span>
+</div>
+</div>
+<!-- Event 2 (Liverpool Goal) -->
+<div class="flex w-full items-center justify-between group">
+<div class="w-[45%] flex flex-col items-end text-right">
+<span class="font-data-tabular text-data-tabular text-secondary-fixed font-bold">41'</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest shadow-sm flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[16px] text-on-surface">sports_soccer</span>
+</div>
+<div class="w-[45%] flex flex-col items-start text-left">
+<span class="font-data-tabular text-data-tabular text-on-surface">Darwin Núñez</span>
+<span class="font-label-caps text-label-caps text-outline">Assist: Trent Alexander-Arnold</span>
+</div>
+</div>
+<!-- Event 3 (Yellow Card Arsenal) -->
+<div class="flex w-full items-center justify-between group">
+<div class="w-[45%] flex flex-col items-end text-right">
+<span class="font-data-tabular text-data-tabular text-on-surface">Declan Rice</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest shadow-sm flex items-center justify-center z-10">
+<div class="w-3 h-4 bg-tertiary-fixed rounded-sm shadow-sm rotate-12"></div>
+</div>
+<div class="w-[45%] flex flex-col items-start">
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">58'</span>
+</div>
+</div>
+<!-- Event 4 (Arsenal Goal) -->
+<div class="flex w-full items-center justify-between group">
+<div class="w-[45%] flex flex-col items-end text-right">
+<span class="font-data-tabular text-data-tabular text-on-surface">Gabriel Martinelli</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container shadow-sm flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[16px]">sports_soccer</span>
+</div>
+<div class="w-[45%] flex flex-col items-start">
+<span class="font-data-tabular text-data-tabular text-primary-fixed font-bold">67'</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Form Badges -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container rounded-xl shadow-md p-md flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Arsenal Form</span>
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+<div class="w-6 h-6 rounded-sm bg-surface-container-highest flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-surface-variant text-[12px]">D</div>
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+<div class="w-6 h-6 rounded-sm bg-error-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-error-container text-[12px]">L</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl shadow-md p-md flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Liverpool Form</span>
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+<div class="w-6 h-6 rounded-sm bg-surface-container-highest flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-surface-variant text-[12px]">D</div>
+<div class="w-6 h-6 rounded-sm bg-tertiary-container flex items-center justify-center shadow-sm font-data-tabular text-data-tabular text-on-tertiary-container text-[12px]">W</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Stats & Venue) -->
+<div class="flex flex-col gap-gutter md:col-span-4">
+<!-- Venue Info -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden flex flex-col">
+<div class="w-full h-32 bg-cover bg-center mix-blend-luminosity opacity-70" data-location="Emirates Stadium, London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqlriUl5cGQ3bjfA2Oclv4kWz9xre1_LqlPgKteC9-7N0Nhc2nmy-0yovztBe46mCtz_CqtCcGSfoZgg7O6AWcFP0YutHLs9cCkkZ4RmVopv51tncYQiSdwcQX5me_koCt5_5Z3Sf3GiBCI9cawQGldouMRqU1p-mdWLk-_vU4-P_4zZNnU0Q8X1oaDkfljlszK1cadjiiDKce-c2Bue8mUXTG9e7vnaAl4W6i4giXxjNyQZ5PnEspqA')"></div>
+<div class="p-md bg-surface-container relative -mt-4 shadow-[0_-8px_16px_rgba(0,0,0,0.4)] rounded-t-xl z-10 flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Venue</span>
+<h4 class="font-body-md text-body-md text-on-surface font-semibold">Emirates Stadium</h4>
+<div class="flex items-center justify-between mt-2 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span class="font-data-tabular text-data-tabular">60,214</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">thermostat</span>
+<span class="font-data-tabular text-data-tabular">12°C, Rain</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Match Stats Preview -->
+<div class="bg-surface-container rounded-xl shadow-md p-md flex flex-col gap-md">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Match Stats</h3>
+<span class="material-symbols-outlined text-outline">bar_chart</span>
+</div>
+<!-- Stat Row: Possession -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-data-tabular text-data-tabular">
+<span class="text-primary-fixed">54%</span>
+<span class="text-on-surface-variant uppercase text-[10px] tracking-widest">Possession</span>
+<span class="text-secondary">46%</span>
+</div>
+<div class="flex w-full h-2 bg-surface-container-highest rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary-container" style="width: 54%"></div>
+<div class="h-full bg-secondary-container" style="width: 46%"></div>
+</div>
+</div>
+<!-- Stat Row: Shots -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-data-tabular text-data-tabular">
+<span class="text-primary-fixed">12</span>
+<span class="text-on-surface-variant uppercase text-[10px] tracking-widest">Shots</span>
+<span class="text-secondary">9</span>
+</div>
+<div class="flex w-full h-2 bg-surface-container-highest rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary-container" style="width: 57%"></div>
+<div class="h-full bg-secondary-container" style="width: 43%"></div>
+</div>
+</div>
+<!-- Stat Row: xG -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-data-tabular text-data-tabular">
+<span class="text-primary-fixed">1.84</span>
+<span class="text-on-surface-variant uppercase text-[10px] tracking-widest">Expected Goals (xG)</span>
+<span class="text-secondary">1.12</span>
+</div>
+<div class="flex w-full h-2 bg-surface-container-highest rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary-container" style="width: 62%"></div>
+<div class="h-full bg-secondary-container" style="width: 38%"></div>
+</div>
+</div>
+<button class="mt-2 w-full py-2 bg-surface-container-highest hover:bg-surface-variant text-on-surface font-data-tabular text-data-tabular rounded-lg transition-colors shadow-sm">View Full Stats</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple tab interaction script for demonstration purposes
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('button[role="tab"]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        tabs.forEach(t => {
+          t.setAttribute('aria-selected', 'false');
+          t.className = 'font-data-tabular text-data-tabular text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-6 py-2 rounded-lg whitespace-nowrap transition-all';
+        });
+        const clicked = e.target;
+        clicked.setAttribute('aria-selected', 'true');
+        clicked.className = 'font-data-tabular text-data-tabular text-on-primary-container bg-primary-container px-6 py-2 rounded-lg shadow-sm whitespace-nowrap transition-all';
+      });
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-xl mt-xl"><div class="max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop"><div class="flex flex-col md:flex-row justify-between items-center gap-lg"><span class="font-headline-md text-headline-md tracking-tighter text-on-surface-variant opacity-50">FOOTONOMY</span><div class="flex gap-lg text-on-surface-variant text-data-tabular"><a class="hover:text-primary transition-colors" href="#">Terms</a><a class="hover:text-primary transition-colors" href="#">Privacy</a><a class="hover:text-primary transition-colors" href="#">Support</a></div><div class="text-on-surface-variant text-data-tabular opacity-60">© 2024 Footonomy. All rights reserved.</div></div></div></footer></body></html>

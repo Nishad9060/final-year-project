@@ -1,0 +1,213 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#ffb3ad","inverse-on-surface":"#313031","error-container":"#93000a","surface":"#131314","background":"#131314","surface-variant":"#353436","on-tertiary":"#003915","on-tertiary-container":"#84ff9c","surface-container-highest":"#353436","secondary-fixed-dim":"#ffb3ad","on-error-container":"#ffdad6","error":"#ffb4ab","outline":"#958da1","on-surface-variant":"#ccc3d8","outline-variant":"#4a4455","tertiary":"#4ae176","on-background":"#e5e2e3","on-tertiary-fixed-variant":"#005321","surface-tint":"#d2bbff","on-surface":"#e5e2e3","primary-container":"#7c3aed","on-primary-container":"#ede0ff","primary-fixed":"#eaddff","on-secondary-fixed-variant":"#930013","surface-dim":"#131314","tertiary-fixed-dim":"#4ae176","on-secondary-container":"#ffaea8","surface-bright":"#3a393a","tertiary-fixed":"#6bff8f","on-secondary-fixed":"#410004","surface-container-low":"#1c1b1c","inverse-surface":"#e5e2e3","on-primary-fixed-variant":"#5a00c6","secondary-fixed":"#ffdad7","primary":"#d2bbff","secondary-container":"#a40217","on-primary":"#3f008e","on-secondary":"#68000a","surface-container":"#201f20","surface-container-high":"#2a2a2b","surface-container-lowest":"#0e0e0f","on-tertiary-fixed":"#002109","primary-fixed-dim":"#d2bbff","tertiary-container":"#007733","on-primary-fixed":"#25005a","on-error":"#690005","inverse-primary":"#732ee4"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"xs":"4px","gutter":"16px","max-width":"1200px","xl":"40px","base":"4px","margin-mobile":"16px","sm":"8px","margin-desktop":"32px","lg":"24px","md":"16px"},"fontFamily":{"score-display":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"label-caps":["Inter"],"score-display-mobile":["Inter"],"body-md":["Inter"],"data-tabular":["Inter"],"body-lg":["Inter"]},"fontSize":{"score-display":["48px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"score-display-mobile":["36px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"data-tabular":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-16 w-full max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-xl"><span class="font-headline-md text-headline-md tracking-tighter text-on-surface select-none">FOOTONOMY</span><nav class="hidden md:flex items-center gap-lg" data-active-classes="text-primary font-semibold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="matches" href="#">Matches</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tournaments" href="#">Tournaments</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="search" href="#">Search</a></nav></div><div class="flex items-center gap-md"><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" data-path="login" href="#">Login</a><div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center cursor-pointer hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile lg:px-margin-desktop py-lg lg:py-xl gap-xl min-h-screen">
+<!-- Search Input Area -->
+<div class="relative w-full max-w-3xl mx-auto z-10 group">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-xl group-focus-within:bg-primary/20 transition-colors duration-500"></div>
+<div class="relative flex items-center bg-surface-container-high rounded-full overflow-hidden shadow-lg border border-outline-variant/30 focus-within:border-primary/50 transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface-variant ml-lg text-[28px]">search</span>
+<input autocomplete="off" autofocus="" class="w-full bg-transparent border-none outline-none font-headline-md text-headline-md text-on-surface placeholder:text-on-surface-variant/50 px-md py-md" id="global-search" placeholder="Search teams, tournaments, players..." spellcheck="false" type="text"/>
+<button class="hidden mr-md p-sm rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors flex items-center justify-center" id="clear-search">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Active Search State (Results) -->
+<div class="w-full max-w-max-width mx-auto flex flex-col lg:flex-row gap-xl" id="search-results">
+<!-- Results Column 1: Teams & Tournaments -->
+<div class="flex-1 flex flex-col gap-xl">
+<!-- Teams Section -->
+<section class="flex flex-col gap-md">
+<div class="flex items-center gap-sm pb-sm border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Teams</h2>
+<span class="ml-auto font-data-tabular text-data-tabular text-on-surface-variant/70">4 Results</span>
+</div>
+<div class="flex flex-col gap-xs">
+<!-- Result Item: Team -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-outline-variant/30 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover mix-blend-screen" data-alt="A clean, minimalist football crest design for 'Real Madrid', featuring a stylized crown and golden accents against a dark background, evoking prestige and history, vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyXWj5hxexAAum88Yvx5TZSeb6bLQk41w2Y-1gOuDUo_4XZsAZzMqr5hpRhgfE6qxcIhnzamT3nqjB_vMW0jhDHu7b63m0C0f83R7JBt0iPlHN9sywvKUfXMlJi5VuL_MhVbzoWR1_S7ukHOXVVCIv7AEDEZM7oIDvCI3s-05vKLV08srkJx0qaOnQiGM57jqQuUE1qhc2LmLjrINzfh45sCnRLl0WKnyKe5AuBWfnqFlyWrhJwdFqA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-primary transition-colors">Real Madrid CF</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant truncate">La Liga • Spain</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transform duration-300">chevron_right</span>
+</div>
+<!-- Result Item: Team -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-outline-variant/30 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover mix-blend-screen" data-alt="A clean, minimalist football crest design for 'Manchester City', featuring a stylized ship and light blue color palette against a dark background, vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJWs3pzq--cLQkmDSubhQIsZZ0nb_deKXKv4QMaYpe5thT_qRi2geABOKdMmKwCdgK3RUym4urUxsy0ZOeF6SxhVH7HCDMmVad7cMRrzmX_Rrr8kiJxGVM5-JFj6wpRN--6wmNquhmiJDI3UTAQj6x-D4cVXX5DTA7FUSlOFUO6tcfLS9leDrXTxXI6lFl1FoauD9cV_geZdgOnH1y5Uhysx8FkXu5BNM7Rp5pLvSk1VjW3Nqvrfg6aw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-primary transition-colors">Manchester City FC</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant truncate">Premier League • England</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transform duration-300">chevron_right</span>
+</div>
+<!-- Result Item: Team -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-outline-variant/30 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover mix-blend-screen" data-alt="A clean, minimalist football crest design for 'Bayern Munich', featuring a red, blue, and white diamond pattern against a dark background, vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3QRJd8fgyh1VXjOpZbslyRPp3KNkToyF69L9S3v2os7WbvLhuigb1df57IZEJ6YjcI1i1_gmPhSErA9YTZWi3u9aXgiJgRG8NbPAaxFeJNZe3sFRs358xqbF7s6WlA9jA_BSrjO4AI-rUqxvxMlxp7zmzX3NLxdsVBTRsGtkNuykQUUXx1gWGMrGI6hKMX28-LjUptdtZirvn-ckRZVaC_eFhleVf3oX2CGWu4A29GjDZWAQXyzMlFg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-primary transition-colors">FC Bayern München</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant truncate">Bundesliga • Germany</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transform duration-300">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Tournaments Section -->
+<section class="flex flex-col gap-md mt-lg">
+<div class="flex items-center gap-sm pb-sm border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-[20px]">emoji_events</span>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Tournaments</h2>
+<span class="ml-auto font-data-tabular text-data-tabular text-on-surface-variant/70">2 Results</span>
+</div>
+<div class="flex flex-col gap-xs">
+<!-- Result Item: Tournament -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-tertiary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center flex-shrink-0">
+<img class="w-8 h-8 object-contain" data-alt="Abstract, geometric logo representing the UEFA Champions League, featuring glowing starry patterns against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWuyXbveI_YMAeDGebH-dMUWtZztu38bkkL5E2AV-ctuxk7afy7LMuzavQE_EvNbhGA_Viwliq6kVANFgxmI5w7AIzkvQapbO70LuAqtQ2v8YM7Plf3JtIx8-TKNIbjdDeucSauq_7wOa9u64xNtr3FG9dNarQeN2c1uVnu1RtI5nd9NAMUd0-XOebo7QsJ-WVLwxeu38DQPGNew33TP52wYYKJHP0sv6gDskHeae5GiebLNRh6p4g3A"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-tertiary transition-colors">UEFA Champions League</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant truncate">Europe • Club Competition</span>
+</div>
+</div>
+<!-- Result Item: Tournament -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-tertiary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center flex-shrink-0">
+<img class="w-8 h-8 object-contain" data-alt="Stylized lion logo representing the English Premier League, minimal vector style, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1QzhtutZWe5czGnghRBua2x_b-i8RNbcF8u-larCQcMB3oxwRr1a1ZTP9wXsE4UaiIDwuAZSRONQZhUhV4hrLZBlkfkjpAt0keDyZMJ87HLBeGf7EzgjPdlmKOHtf7H3MtqN7CFIufHpFAkzIxbA3bHDIrkFhvo6aA0-PV7Fsj4ryaxF0VKh5HgxcFQgyqrtS5dl0OnNUpCvQXmPCw3b27df6zZJpyG_tb6LG4G4lwtspX68beKdUYQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-tertiary transition-colors">Premier League</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant truncate">England • Domestic League</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Results Column 2: Players -->
+<div class="flex-1 flex flex-col gap-xl">
+<section class="flex flex-col gap-md">
+<div class="flex items-center gap-sm pb-sm border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-[20px]">directions_run</span>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Players</h2>
+<span class="ml-auto font-data-tabular text-data-tabular text-on-surface-variant/70">5 Results</span>
+</div>
+<div class="flex flex-col gap-xs">
+<!-- Result Item: Player -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-secondary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-outline-variant/30 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Dramatic, high-contrast portrait of a professional football player (Jude Bellingham style) looking determined, dark studio lighting, moody atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nOTxPjxyn5zsb4XIy4l3mYEJxtDAwxLLgf3vdTqPqbHOD3DFcuWxjNhXMf9wpG6N2VkI6rdyW58tbzpc-Lioy_aA1ZHIlQYDdHVPsBlt2mqbWGBp58AbgbyxtTTCmUgffLkF7TZ1Ut1_QCfCT3-ypdk5TW3w54aYre5EnhBYmFnuGrEEaJR1vRSR4cnqZsLyYcCH4vDa3Io17YPnxbcGALKJej2mmRSqKI3TLMggw9rslKvgaG9HMg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-secondary transition-colors">Jude Bellingham</span>
+<div class="flex items-center gap-sm font-data-tabular text-data-tabular text-on-surface-variant truncate">
+<span>Real Madrid CF</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant/50"></span>
+<span>Midfielder</span>
+</div>
+</div>
+<div class="ml-auto font-score-display text-score-display text-surface-variant/20 select-none group-hover:text-surface-variant/40 transition-colors">5</div>
+</div>
+<!-- Result Item: Player -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-secondary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-outline-variant/30 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Dramatic, high-contrast portrait of a professional football player (Erling Haaland style) looking focused, dark studio lighting, moody atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAeq_Kk4Nm9FSis7t6Ocr_RWvovjsuJY0rvb9ZUpl8jevETslqUvEhTOK532bp6mn0Kmykg25uWb21uVgv_IPtGy8WZ85cXKoF9LhRI3o-6kv5yU9q_OKxFawYHIpdo7_MPxY5P1J9TlKvxMKu8jIqBtq8hQiP3exvQzHwStFZ-v-oVKktkRzz6LtdpwjHo2DYKMWhDse2PkE3SiNrvGGIcsioV0zXZgShgyzFrEYVXGj9Nih1MJxJFA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-secondary transition-colors">Erling Haaland</span>
+<div class="flex items-center gap-sm font-data-tabular text-data-tabular text-on-surface-variant truncate">
+<span>Manchester City FC</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant/50"></span>
+<span>Forward</span>
+</div>
+</div>
+<div class="ml-auto font-score-display text-score-display text-surface-variant/20 select-none group-hover:text-surface-variant/40 transition-colors">9</div>
+</div>
+<!-- Result Item: Player -->
+<div class="flex items-center gap-md p-md bg-surface-container hover:bg-surface-container-high rounded-lg cursor-pointer transition-colors group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-secondary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-outline-variant/30 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Dramatic, high-contrast portrait of a professional football player (Kylian Mbappe style) in profile, dark studio lighting, moody atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLdR_M3O99yIB8HAou0Ci81eeeixnhLuaFoFNVqHt3wn8gbvErm-knAWDcaS5SdtOGf8pf0U8xXIwKRmSaaFWr02NvCpY-NEmBYMnhXhjD0cS60LpKIUO6g9tBwKpHifG7UGQWWEpT-LvsvfEQP9hXEeH5Tp8ZXCKRBlVO7vtPMLxs48PDyRl2VofOWnDgVt90rdhKX9b2q6Gal7iuLODLqlW_pGfIcMwI0wLzj86jlrESncQ-6m1cA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate group-hover:text-secondary transition-colors">Kylian Mbappé</span>
+<div class="flex items-center gap-sm font-data-tabular text-data-tabular text-on-surface-variant truncate">
+<span>Paris Saint-Germain</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant/50"></span>
+<span>Forward</span>
+</div>
+</div>
+<div class="ml-auto font-score-display text-score-display text-surface-variant/20 select-none group-hover:text-surface-variant/40 transition-colors">7</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Empty State (Initially Hidden) -->
+<div class="hidden flex-col items-center justify-center w-full max-w-2xl mx-auto py-32 text-center" id="empty-state">
+<div class="relative w-48 h-48 mb-xl">
+<!-- Decorative SVG for Empty State -->
+<svg class="absolute inset-0 w-full h-full text-surface-variant/30" fill="none" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<circle class="animate-[spin_20s_linear_infinite]" cx="100" cy="100" r="80" stroke="currentColor" stroke-dasharray="8 8" stroke-width="2"></circle>
+<circle class="animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]" cx="100" cy="100" r="50" stroke="currentColor" stroke-width="1"></circle>
+<path d="M70 100 A30 30 0 1 1 130 100 A30 30 0 1 1 70 100" stroke="currentColor" stroke-width="2"></path>
+</svg>
+<span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-on-surface-variant/50 text-[64px]">sports_soccer</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-sm">No results found</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">We couldn't find anything matching your search. Try different keywords or check for typos.</p>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('global-search');
+        const clearBtn = document.getElementById('clear-search');
+        const resultsContainer = document.getElementById('search-results');
+        const emptyState = document.getElementById('empty-state');
+
+        // Simulated search behavior for demonstration
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value.trim().toLowerCase();
+            
+            // Toggle clear button
+            if (val.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            // Simulate empty state trigger (e.g., if search equals "xyz")
+            if (val === 'xyz') {
+                resultsContainer.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+            } else {
+                resultsContainer.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+            }
+        });
+
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchInput.focus();
+            clearBtn.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            emptyState.classList.remove('flex');
+        });
+    });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-xl mt-xl"><div class="max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop"><div class="flex flex-col md:flex-row justify-between items-center gap-lg"><span class="font-headline-md text-headline-md tracking-tighter text-on-surface-variant opacity-50">FOOTONOMY</span><div class="flex gap-lg text-on-surface-variant text-data-tabular"><a class="hover:text-primary transition-colors" href="#">Terms</a><a class="hover:text-primary transition-colors" href="#">Privacy</a><a class="hover:text-primary transition-colors" href="#">Support</a></div><div class="text-on-surface-variant text-data-tabular opacity-60">© 2024 Footonomy. All rights reserved.</div></div></div></footer></body></html>

@@ -1,0 +1,70 @@
+erDiagram
+    USER ||--o{ FOLLOWING : "creates"
+    USER ||--o{ PREFERENCE : "has"
+    TEAM ||--o{ FOLLOWING : "is followed via"
+    TOURNAMENT ||--o{ FOLLOWING : "is followed via"
+    TOURNAMENT ||--o{ MATCH : "contains"
+    TOURNAMENT ||--o{ STANDING : "has"
+    TEAM ||--o{ MATCH : "plays as home"
+    TEAM ||--o{ MATCH : "plays as away"
+    TEAM ||--o{ STANDING : "has row in"
+
+    USER {
+        uuid id PK
+        string email UK
+        string password_hash
+        timestamp created_at
+    }
+
+    TEAM {
+        uuid id PK
+        string name
+        string short_name
+        string logo_url
+        string external_id UK "football-data.org ref"
+    }
+
+    TOURNAMENT {
+        uuid id PK
+        string name
+        string season
+        string external_id UK "football-data.org ref"
+    }
+
+    MATCH {
+        uuid id PK
+        uuid tournament_id FK
+        uuid home_team_id FK
+        uuid away_team_id FK
+        timestamp kickoff_time
+        string status "scheduled | live | finished"
+        int home_score
+        int away_score
+        timestamp last_synced_at
+    }
+
+    STANDING {
+        uuid id PK
+        uuid tournament_id FK
+        uuid team_id FK
+        int position
+        int played
+        int won
+        int drawn
+        int lost
+        int points
+    }
+
+    FOLLOWING {
+        uuid id PK
+        uuid user_id FK
+        string entity_type "team | tournament"
+        uuid entity_id "polymorphic ref to TEAM.id or TOURNAMENT.id"
+    }
+
+    PREFERENCE {
+        uuid id PK
+        uuid user_id FK
+        string key
+        string value
+    }
